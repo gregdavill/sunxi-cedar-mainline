@@ -1804,7 +1804,7 @@ static int cedardev_init(struct platform_device *pdev)
 #endif /*LINUX_VERSION_CODE >= KERNEL_VERSION(4,11,0)*/
 
 #if !defined(USE_ION)
-	cedar_devp->ve_size = 80 * SZ_1M;
+	cedar_devp->ve_size = 32 * SZ_1M;
 	ret = dma_set_coherent_mask(cedar_devp->dev, DMA_BIT_MASK(32));
 	if (ret) {
 		dev_err(cedar_devp->dev, "DMA enable failed\n");
